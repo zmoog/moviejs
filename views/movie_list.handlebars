@@ -1,0 +1,22 @@
+
+<div class="container">
+  <div class="page-header">
+    <h1>{{title}}</h1>
+  </div>
+
+  <table class="table">
+    <tr>
+      <th>Title</th>
+      <th class="visible-md visible-lg">Genre</th>
+      <th>Director</th>
+    </tr>
+    {{#each movies}}
+    <tr>
+      <td><a href="/movies/{{idMovie}}/">{{c00}}</a> <span class="text-muted">({{c07}})</span> {{#if lastPlayed}}<span class="label label-default">{{lastPlayed}}</span>{{/if}}</td>
+      <td class="visible-md visible-lg">{{c14}}</td>
+      <td>{{c15}}</td>
+    </tr>
+    {{/each}}
+  </table>
+
+</div>

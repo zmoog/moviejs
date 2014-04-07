@@ -41,8 +41,8 @@ module.exports = function (grunt) {
           livereload: reloadPort
         }
       },
-      jade: {
-        files: ['views/*.jade'],
+      handlebars: {
+        files: ['views/*.handlebars'],
         options: {
           livereload: reloadPort
         }
@@ -66,7 +66,7 @@ module.exports = function (grunt) {
           }
           done(reloaded);
         });
-    }, 500);
+    }, 800);
   });
 
   grunt.registerTask('default', ['develop', 'watch']);

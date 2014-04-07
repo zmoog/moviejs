@@ -1,0 +1,33 @@
+<div class="container">
+
+  <div class="page-header">
+    <h1>{{movie.c00}} <span class="text-muted">({{ movie.c07 }})</span> </h1>
+  </div>
+
+  <div class="row">
+    <div class="hidden-xs col-sm-4 col-md-3">
+      {{#each posters}}
+      {{#if @first}}
+        {{{ poster ../../title this }}}
+      {{else}}
+        <!-- {{{ poster ../../title this }}} -->
+      {{/if}}
+      {{/each}}
+    </div>
+    <div class="col-xs-12 col-sm-8 col-md-9">
+      <p class="lead">{{movie.c15}}<span class="text-muted pull-right">{{vote movie.c05}}</span></p>
+      <p class="lead">{{movie.c03}}</p>
+      <p>{{movie.c01}}</p>
+    </div>
+  </div>
+
+  <p class="text-center"><a href="#details">More... {{foo}}</a></p>
+
+  <hr>
+
+  <p class="text-muted">
+  {{movie.c12}}
+  {{#if movie.playCount}}<span class="badge pull-right" title="Play count">{{movie.playCount}}</span>{{/if}}
+
+  </p>
+</div>
